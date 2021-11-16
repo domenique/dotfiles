@@ -30,6 +30,7 @@ brew 'jq'
 brew 'macvim'
 brew 'jenv'
 brew 'pgcli'
+brew 'nativefier'
 
 # Apps
 cask 'iterm2'
@@ -46,6 +47,7 @@ cask 'postman'
 cask 'krisp'
 cask 'launchbar'
 cask 'kaleidoscope'
+cask '1password'
 
 # Fonts
 brew 'svn' # necessary for the fonts
