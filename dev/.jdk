@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Load jenv automatically by adding it to the path and initializing it.
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

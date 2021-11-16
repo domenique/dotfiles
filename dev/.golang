@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Set a different GO path
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin

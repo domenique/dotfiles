@@ -1,0 +1,41 @@
+// Decorates any repository declarations with Artifactory credentials
+// in order to respond to 401 auth challenges.
+
+logger.info('Applying init.gradle to add Artifactory credentials')
+
+gradle.projectsLoaded {
+    rootProject.allprojects {
+        buildscript {
+            repositories.matching {
+                it.hasProperty("url") && it.url.host == 'hostname.jfrog.io'
+            }.all {
+                credentials {
+                    username = "${ARTIFACTORY_USER}"
+                    password = "${ARTIFACTORY_PASSWORD}"
+                }
+            }
+        }
+
+        repositories.matching {
+            it.hasProperty("url") && it.url.host == 'hostname.jfrog.io'
+        }.all {
+            credentials {
+                username = "${ARTIFACTORY_USER}"
+                password = "${ARTIFACTORY_PASSWORD}"
+            }
+        }
+
+        apply plugin: 'maven-publish'
+        publishing {
+            repositories.matching {
+                it.hasProperty("url") && it.url.host == 'hostname.jfrog.io'
+            }.all {
+                credentials {
+                    username = "${ARTIFACTORY_USER}"
+                    password = "${ARTIFACTORY_PASSWORD}"
+                }
+            }
+        }
+
+    }
+}
