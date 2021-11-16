@@ -83,7 +83,7 @@ plugins=(
   docker-compose
   github
   brew
-  osx
+  macos
   jenv
   gradle
   autojump
