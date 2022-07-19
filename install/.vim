@@ -26,10 +26,4 @@ else
   cd $VIM_NERDTREE && git pull
 fi
 
-# cd ~/.vim/bundle && \
-# git clone https://github.com/tpope/vim-sensible.git && \
-# git clone https://tpope.io/vim/fugitive.git && \
-# git clone https://github.com/preservim/nerdtree.git
-
-
 
