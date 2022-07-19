@@ -32,7 +32,6 @@ brew 'macvim'
 brew 'jenv'
 brew 'pgcli'
 brew 'nativefier'
-brew 'visual-studio-code'
 
 # Apps
 cask 'iterm2'
@@ -53,6 +52,7 @@ cask '1password'
 cask 'zulu-jdk8'
 cask 'zulu-jdk11'
 cask 'zulu-jdk17'
+cask 'visual-studio-code'
 
 # Fonts
 brew 'svn' # necessary for the fonts
