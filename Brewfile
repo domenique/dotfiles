@@ -31,6 +31,7 @@ brew 'macvim'
 brew 'jenv'
 brew 'pgcli'
 brew 'nativefier'
+brew 'visual-studio-code'
 
 # Apps
 cask 'iterm2'
