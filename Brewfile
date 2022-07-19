@@ -3,6 +3,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
 tap 'remotemobprogramming/brew'
+tap 'mdogan/zulu'
 
 #Binaries
 # brew 'zsh'
@@ -49,6 +50,9 @@ cask 'krisp'
 cask 'launchbar'
 cask 'kaleidoscope'
 cask '1password'
+cask 'zulu-jdk8'
+cask 'zulu-jdk11'
+cask 'zulu-jdk17'
 
 # Fonts
 brew 'svn' # necessary for the fonts
