@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 
-source $DOTFILES/dev/.jdk
+source $DOTFILES/dev/.asdf
+# source $DOTFILES/dev/.jdk
 source $DOTFILES/dev/.golang

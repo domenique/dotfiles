@@ -84,7 +84,6 @@ plugins=(
   github
   brew
   macos
-  jenv
   gradle
   autojump
   zsh-autosuggestions

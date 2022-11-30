@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+echo "Setting up asdf..."
+set -e
+DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
+
+asdf plugin-add java
+asdf install java openjdk-17
+asdf global java openjdk-17

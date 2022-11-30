@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+# set java home from the asdf-java plugin
+. $HOME/.asdf/plugins/java/set-java-home.zsh
