@@ -4,14 +4,14 @@ DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 
 # Rosetta 2 is Apple’s software solution for aiding in the transition from Macs running on Intel processors
 #  to Macs running on Apple Silicon processors.
-UNAME_MACHINE="$(/usr/bin/uname -m)"
-if [[ "$UNAME_MACHINE" == "arm64" ]]; then
-    if [[ ! -f "/Library/Apple/System/Library/LaunchDaemons/com.apple.oahd.plist" ]]; then
-      sudo softwareupdate --install-rosetta --agree-to-license
-    else
-      echo "Rosetta already installed"
-    fi
-fi
+# UNAME_MACHINE="$(/usr/bin/uname -m)"
+# if [[ "$UNAME_MACHINE" == "arm64" ]]; then
+#     if [[ ! -f "/Library/Apple/System/Library/LaunchDaemons/com.apple.oahd.plist" ]]; then
+#       sudo softwareupdate --install-rosetta --agree-to-license
+#     else
+#       echo "Rosetta already installed"
+#     fi
+# fi
 
 # Install all our dependencies with bundle (See Brewfile)
 brew update

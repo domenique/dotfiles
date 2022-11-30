@@ -32,6 +32,9 @@ brew 'macvim'
 brew 'jenv'
 brew 'pgcli'
 brew 'nativefier'
+brew 'asdf'
+brew 'gpg'
+brew 'gawk'
 
 # Apps
 cask 'iterm2'
