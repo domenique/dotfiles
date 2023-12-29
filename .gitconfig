@@ -4,6 +4,8 @@
 	#
 	email = domenique@tripled.io
 	name = Doménique Tilleuil
+[includeIf "gitdir:~/dev/bluecorner/**"] # job needs, like workspace/* so all included projects
+    	path = .gitconfig-bluecorner
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -39,12 +41,14 @@
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
+	trustExitCode = true
 [merge]
 	tool = Kaleidoscope
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
+	trustExitCode = true
 [mergetool]
 	prompt = false
 	keepBackup = false
@@ -55,6 +59,8 @@
 	autocrlf = input
 [pull]
 	rebase = true
+[push]
+	autoSetupRemote = true
 [branch "master"]
 	mergeoptions = --no-ff
 [branch "develop"]

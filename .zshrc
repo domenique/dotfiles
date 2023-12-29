@@ -121,4 +121,14 @@ source ~/.zprofile
 
 export PATH="/usr/local/sbin:$HOME/bin:$PATH"
 
+alias gcb="gradle clean build"
+alias mci="mvn clean install"
+
 eval $(thefuck --alias)
+
+# Load ASDF for managing JVM versions
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# aliases for bluecorner
+alias db-qa='aws ssm start-session --region eu-west-1 --target "i-0995f22e7c03c0ba3" --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters="host=blink-qa-postgresql.cbdmqou674tg.eu-west-1.rds.amazonaws.com",portNumber="5432",localPortNumber="5432"'
+alias db-test='aws ssm start-session --region eu-west-1 --target "i-01e285e6f89d02a1a" --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters="host=blink-test-postgresql.cbdmqou674tg.eu-west-1.rds.amazonaws.com",portNumber="5432",localPortNumber="5434"'

@@ -7,7 +7,7 @@ gradle.projectsLoaded {
     rootProject.allprojects {
         buildscript {
             repositories.matching {
-                it.hasProperty("url") && it.url.host == 'hostname.jfrog.io'
+                it.hasProperty("url") && it.url == 'hostname.jfrog.io'
             }.all {
                 credentials {
                     username = "${ARTIFACTORY_USER}"
@@ -17,7 +17,7 @@ gradle.projectsLoaded {
         }
 
         repositories.matching {
-            it.hasProperty("url") && it.url.host == 'hostname.jfrog.io'
+            it.hasProperty("url") && it.url == 'hostname.jfrog.io'
         }.all {
             credentials {
                 username = "${ARTIFACTORY_USER}"
@@ -28,7 +28,7 @@ gradle.projectsLoaded {
         apply plugin: 'maven-publish'
         publishing {
             repositories.matching {
-                it.hasProperty("url") && it.url.host == 'hostname.jfrog.io'
+                it.hasProperty("url") && it.url == 'hostname.jfrog.io'
             }.all {
                 credentials {
                     username = "${ARTIFACTORY_USER}"
